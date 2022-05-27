@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="game()">Play</button>
+</body>
+<script>
+    function game() {
+        let number = parseInt(prompt("Nhap vao 1 so tu nhien bat ky, lon hon 1: "))
+        let result = Math.floor(Math.random() * (number - 1) + 1)
+        console.log(result);
+        let guest
+        let count = 0
+        do {
+            guest = prompt("Nhap gia tri muon doan: ")
+            if (guest < result) {
+                alert("tang len!!!")
+                count += 1
+            } else if (guest > result) {
+                alert("giam xuong!!!")
+                count += 1
+            } else {
+                alert("You win")
+                break
+            }
+        }
+        while (count < 3)
+
+    }
+</script>
+
+</html>
